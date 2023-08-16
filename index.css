@@ -1,12 +1,10 @@
 body {
-  display: flex;
   align-items: center;
   justify-content: center;
 }
 
 div {
-  width: 40rem;
-  height: 4rem;
-  padding: 3rem 0.5rem;
+  width: 800px;
   text-align: left;
+  margin: 0 auto;
 }
