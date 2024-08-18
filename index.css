@@ -1,19 +1,44 @@
+@keyframes rainbow {
+    0% { color: red; }
+    14% { color: orange; }
+    28% { color: yellow; }
+    42% { color: green; }
+    57% { color: blue; }
+    71% { color: indigo; }
+    85% { color: violet; }
+    100% { color: red; }
+}
+
+@keyframes jump {
+    0%, 100% { bottom: 0; }
+    50% { bottom: 50px; }
+}
+
 body {
     font-family: 'Roboto', sans-serif;
-    background-image: url('frog-background.jpg');
+    background-image: url('pond-background.jpg');
     background-size: cover;
     background-attachment: fixed;
     color: #006400;
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.frog-border {
+    height: 20px;
+    background-image: url('frog-border.png');
+    background-repeat: repeat-x;
+    background-size: contain;
 }
 
 .container {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
 }
 
 header {
@@ -22,21 +47,70 @@ header {
 }
 
 h1 {
-    color: #228B22;
-    font-size: 2.5em;
-    margin-bottom: 10px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.rainbow-text {
+    animation: rainbow 5s linear infinite;
+}
+
+.frog-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 .frog-icon {
-    width: 50px;
+    width: 80px;
     height: auto;
+    transition: transform 0.3s ease;
+}
+
+.frog-icon:hover {
+    transform: scale(1.2) rotate(10deg);
 }
 
 .content {
-    background-color: #E6FFE6;
+    background-color: rgba(230, 255, 230, 0.8);
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
+    border: 5px solid #4CAF50;
+}
+
+.frog-message {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.message-frog {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.party-details {
+    background-color: rgba(255, 255, 0, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.theme-text {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #FF4500;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.ps-note {
+    background-color: rgba(173, 216, 230, 0.5);
+    padding: 15px;
+    border-radius: 10px;
 }
 
 p {
@@ -47,13 +121,40 @@ iframe {
     display: block;
     margin: 20px auto;
     max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 footer {
     text-align: center;
+    position: relative;
+    height: 150px;
+}
+
+.lily-pad-container {
+    display: flex;
+    justify-content: space-around;
 }
 
 .lily-pad {
-    width: 100px;
+    width: 120px;
     height: auto;
+    transition: transform 0.3s ease;
+}
+
+.lily-pad:hover {
+    transform: scale(1.1);
+}
+
+.jumping-frog {
+    width: 50px;
+    height: 50px;
+    background-image: url('jumping-frog.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: jump 1s infinite ease-in-out;
 }
