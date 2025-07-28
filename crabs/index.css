@@ -18,7 +18,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-image: url('pond-background.jpg');
+    background-image: url('background.png');
     background-size: cover;
     background-attachment: fixed;
     color: #006400;
@@ -27,9 +27,9 @@ body {
     padding: 0;
 }
 
-.frog-border {
+.crab-border {
     height: 20px;
-    background-image: url('frog-border.png');
+    background-image: url('crab2.png');
     background-repeat: repeat-x;
     background-size: contain;
 }
@@ -59,19 +59,19 @@ h1 {
     animation: rainbow 5s linear infinite;
 }
 
-.frog-icons {
+.crab-icons {
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
-.frog-icon {
-    width: 80px;
+.crab-icon {
+    width: 200px;
     height: auto;
     transition: transform 0.3s ease;
 }
 
-.frog-icon:hover {
+.crab-icon:hover {
     transform: scale(1.2) rotate(10deg);
 }
 
@@ -83,13 +83,13 @@ h1 {
     border: 5px solid #4CAF50;
 }
 
-.frog-message {
+.crab-message {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
 
-.message-frog {
+.message-crab {
     width: 100px;
     height: auto;
     margin-right: 20px;
@@ -133,25 +133,25 @@ footer {
     height: 150px;
 }
 
-.lily-pad-container {
+.claw-container {
     display: flex;
     justify-content: space-around;
 }
 
-.lily-pad {
-    width: 120px;
+.claw {
+    width: 400px;
     height: auto;
     transition: transform 0.3s ease;
 }
 
-.lily-pad:hover {
+.claw:hover {
     transform: scale(1.1);
 }
 
-.jumping-frog {
+.jumping-crab {
     width: 50px;
     height: 50px;
-    background-image: url('jumping-frog.png');
+    background-image: url('background.png');
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
